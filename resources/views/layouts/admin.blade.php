@@ -44,7 +44,7 @@
 
    @include('layouts.inc.admin_side_nav_bar')
 
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
     <!-- Navbar -->
       @include('layouts.inc.admin_top_nav_bar')
     <!-- End Navbar -->
