@@ -22,8 +22,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'isAdmin'])->group( function(){
-    Route::get('/dashboard', function(){
-        return view('admin.index');
+    //Route::get('/dashboard', function(){
+        //return view('admin.index');
         //return "this is admin tor bap!!!";
-    });
+    //});
+
+      Route::get('/dashboard', 'Admin\FrontendController@index');
+
+      Route::get('/categories', 'Admin\CategoryController@index');
 });

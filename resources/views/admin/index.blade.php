@@ -2,14 +2,10 @@
 
 @section('content')
 
-<div class="card">
-	<div class="card-body">
-		<h1>Template added</h1>
-	</div>
-</div>
-
-<div class="container-fluid">
-		<h1>Finally Templated added successfully</h1>
+<div>
+    <h1>
+        This is admin main page the goat dashboard
+    </h1>
 </div>
 
 
