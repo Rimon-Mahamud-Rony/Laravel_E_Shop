@@ -12,7 +12,9 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        return view('admin.category.index');
+        $category = Category::all();
+
+        return view('admin.category.index', compact('category')); //compact ekta array return kore variable diye
     }
 
     public function add()
