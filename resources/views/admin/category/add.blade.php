@@ -20,8 +20,6 @@
                     <input type="text" class="form-control" name="slug" placeholder="slug" style="background-color: #D6EAF8;">
                 </div>
 
-
-
                 <div class="form-group col-sm-7">
                     <label >description</label>
                     <textarea  name="description" rows="3" class="form-control" style="background-color: #D6EAF8;"></textarea>
