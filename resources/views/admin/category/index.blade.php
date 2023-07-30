@@ -40,8 +40,8 @@
                     <img src="{{asset('assets/uploads/category/'.$product->image)}}" alt="image here" height="50">
                 </td>
                 <td>
-                    <button class="btn btn-sm btn-info thisbtn">Edit</button>
-                    <button class="btn btn-sm btn-danger thisbtn">Delete</button>
+                    <a href="{{url('edit_prod/'.$product->id)}}" class="btn btn-sm btn-info thisbtn">Edit</a>
+                    <a href="{{url('delete_prod/'.$product->id)}}" class="btn btn-sm btn-danger thisbtn">Delete</a>
                 </td>
 
               </tr>
