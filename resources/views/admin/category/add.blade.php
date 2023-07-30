@@ -53,7 +53,10 @@
 
                 <div class="form-group col-sm-7">
                     <label >image</label>
-                    <input type="file" class="form-control" name="image"  style="background-color: #72bdf3;">
+                    <br>
+                    <img id="show_current_image" height="120">
+                    <br>
+                    <input type="file" class="form-control" name="image" onchange="loadFile(event)" style="background-color: #72bdf3;">
                 </div>
                 <br>
                 <div class="form-group col-sm-7">
@@ -66,5 +69,15 @@
     </div>
 
 </div>
+
+        <script>
+            var loadFile = function (event)
+            {
+                var image_show = document.getElementById("show_current_image");
+
+                image_show.src = URL.createObjectURL(event.target.files[0]);
+            } ;
+        </script>
+
 
 @endsection

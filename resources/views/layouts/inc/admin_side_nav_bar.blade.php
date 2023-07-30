@@ -66,7 +66,7 @@
           <li class="nav-item">
             <a class="nav-link text-white {{ Request::is('add_category')? 'active bg-gradient-warning': ''}}" href="{{url('add_category')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10"></i>
+                &#8853;
               </div>
               <span class="nav-link-text ms-1">Add Categories</span>
             </a>
@@ -133,6 +133,7 @@
         <style>
           .logbutton{
 
+
           }
 
           .logbutton:hover{
@@ -140,8 +141,10 @@
             font-size:1rem;
           }
 
+
         </style>
-        <li class="nav-item ">
+
+        <li class="nav-item" style=" margin-top: 50%;">
           <a class="nav-link active bg-gradient-danger logbutton "
               href="{{ route('logout') }}"
               onclick="event.preventDefault();

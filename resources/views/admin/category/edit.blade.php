@@ -55,20 +55,33 @@
                 </div>
 
                 <div class="form-group col-sm-7">
-                    <label >image</label>
+                    <label >Old Image</label>
                     <img src="{{asset('assets/uploads/category/'.$category->image)}}" height="200" >
-                    <input type="file" class="form-control" name="image"  style="background-color: #72bdf3;">
+                    <br>
+                    <label >New Image</label>
+                    <img id="show_current_image" height="120">
+                    <br>
+                    <input type="file" class="form-control" name="image" onchange="loadFile(event)"  style="background-color: #72bdf3;">
+                    <br>
                 </div>
                 <br>
                 <div class="form-group col-sm-7">
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
 
-
               </form>
         </div>
     </div>
 
 </div>
+
+<script>
+    var loadFile = function (event)
+    {
+        var image_show = document.getElementById("show_current_image");
+
+        image_show.src = URL.createObjectURL(event.target.files[0]);
+    } ;
+</script>
 
 @endsection
