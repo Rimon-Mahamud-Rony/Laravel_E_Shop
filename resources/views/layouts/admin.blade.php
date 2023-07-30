@@ -12,7 +12,7 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
-<?php $page_name=" DASHBOARD"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +22,9 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Rimon's Eshop | <?php echo  $page_name; ?>
+            {{ Request::is('dashboard')? 'RIMONS ESHOP ': ''}}
+            {{ Request::is('categories')? 'RIMONS ESHOP | CATEGORY': ''}}
+            {{ Request::is('add_category')? 'RIMONS ESHOP | ADD CATEGORY': ''}}
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
