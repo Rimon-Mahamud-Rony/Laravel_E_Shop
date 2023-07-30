@@ -403,6 +403,13 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="admin/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  @if (session('status'))
+      <script>
+            swal("{{session('status')}}");
+      </script>
+  @endif
 </body>
 
 </html>
