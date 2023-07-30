@@ -45,4 +45,6 @@ Route::middleware(['auth', 'isAdmin'])->group( function(){
       //Route::get('edit_prod/{id}', [CategoryController::class, 'edit']);
 
       Route::get('edit_prod/{id}', 'Admin\CategoryController@edit');
+
+      Route::put('update_category/{id}', 'Admin\CategoryController@update');
 });
