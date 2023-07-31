@@ -165,7 +165,7 @@
 
         </style>
 
-        <li class="nav-item" style=" margin-top: 50%;">
+        <li class="nav-item">
           <a class="nav-link active bg-gradient-danger logbutton "
               href="{{ route('logout') }}"
               onclick="event.preventDefault();
