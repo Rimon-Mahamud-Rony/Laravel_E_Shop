@@ -29,4 +29,9 @@ class Product extends Model
         'mata_description',
     ];
 
+    public function call_catagory_data()
+    {
+        return $this->belongsTo(Category::class, 'cat_id', 'id');
+    }
+
 }
