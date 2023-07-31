@@ -55,17 +55,19 @@
                 </div>
 
                 <div class="form-group col-sm-7">
-                    <label >Old Image</label>
-                    <img src="{{asset('assets/uploads/category/'.$category->image)}}" height="200" >
                     <br>
-                    <label >New Image</label>
-                    <img id="show_current_image" height="120">
+                    <label style="color: #f90000">Old Image</label>
+                    <img src="{{asset('assets/uploads/category/'.$category->image)}}" height="80" >
+                    <br>
+                    <label style="color: #72bdf3">New Image</label>
+                    <img id="show_current_image" height="200">
                     <br>
                     <input type="file" class="form-control" name="image" onchange="loadFile(event)"  style="background-color: #72bdf3;">
                     <br>
                 </div>
                 <br>
                 <div class="form-group col-sm-7">
+                    <br>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
 

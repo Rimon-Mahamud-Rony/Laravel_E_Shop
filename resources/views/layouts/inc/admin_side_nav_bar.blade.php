@@ -34,7 +34,7 @@
           <hr>
 
         <li class="nav-item">
-          <a class="nav-link text-white {{ Request::is('dashboard')? 'active bg-gradient-success': ''}} " href="{{url('dashboard')}}">
+          <a class="nav-link text-white {{ Request::is('dashboard')? 'active bg-gradient-primary': ''}} " href="{{url('dashboard')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -52,6 +52,24 @@
           </a>
         </li>
     -->
+        <li class="nav-item">
+            <a class="nav-link text-white {{ Request::is('products')? 'active bg-gradient-success': ''}} " href="{{url('products')}}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10"></i>
+            </div>
+
+            <span class="nav-link-text ms-1">Products</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-white {{ Request::is('add_products')? 'active bg-gradient-success': ''}}" href="{{url('add_products')}}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                &#8853;
+            </div>
+            <span class="nav-link-text ms-1">Add Products</span>
+            </a>
+        </li>
 
         <li class="nav-item">
             <a class="nav-link text-white {{ Request::is('categories')? 'active bg-gradient-info': ''}} " href="{{url('categories')}}">
@@ -64,7 +82,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white {{ Request::is('add_category')? 'active bg-gradient-warning': ''}}" href="{{url('add_category')}}">
+            <a class="nav-link text-white {{ Request::is('add_category')? 'active bg-gradient-info': ''}}" href="{{url('add_category')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 &#8853;
               </div>
@@ -80,6 +98,9 @@
             <span class="nav-link-text ms-1">Billing</span>
           </a>
         </li>
+
+
+
 
         <li class="nav-item">
           <a class="nav-link text-white " href="../pages/virtual-reality.html">

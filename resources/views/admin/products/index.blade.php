@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h5>Category Page</h5>
+        <h5>Product Page</h5>
     </div>
 
     <style>
@@ -31,17 +31,17 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($category as $product)
+                @foreach ($products as $recieve_product_items)
               <tr>
-                <td>{{$product->id}}</td>
-                <td>{{$product->name}}</td>
-                <td>{{$product->description}}</td>
+                <td>{{$recieve_product_items->id}}</td>
+                <td>{{$recieve_product_items->name}}</td>
+                <td>{{$recieve_product_items->description}}</td>
                 <td>
-                    <img src="{{asset('assets/uploads/category/'.$product->image)}}" alt="image here" height="50">
+                    <img src="{{asset('assets/uploads/products/'.$recieve_product_items->image)}}" alt="image here" height="50">
                 </td>
                 <td>
-                    <a href="{{url('edit_category/'.$product->id)}}" class="btn btn-sm btn-info thisbtn">Edit</a>
-                    <a href="{{url('delete_category/'.$product->id)}}" class="btn btn-sm btn-danger thisbtn">Delete</a>
+                    <a href="{{url('edit_prod/'.$recieve_product_items->id)}}" class="btn btn-sm btn-info thisbtn">Edit</a>
+                    <a href="{{url('delete_prod/'.$recieve_product_items->id)}}" class="btn btn-sm btn-danger thisbtn">Delete</a>
                 </td>
 
               </tr>
