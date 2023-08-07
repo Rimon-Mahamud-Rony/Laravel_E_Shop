@@ -31,7 +31,31 @@ RIMON'S E-SHOP
     </div>
 </div>
 
+
+<div class="container">
+    <br><br>
+    <h3 class="">Trending Category</h3>
+    <br>
+    <div class="row">
+        <div class="owl-carousel owl-theme">
+            @foreach ($trending_categories as $t_c)
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{{asset('assets/uploads/category/'.$t_c->image)}}" alt="this is image" height="180">
+                            <hr>
+                            <h5 class="text-center">{{$t_c->name}}</h5>
+                            <small>{{$t_c->description}}</small>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
 @endsection
+
 
 
 
