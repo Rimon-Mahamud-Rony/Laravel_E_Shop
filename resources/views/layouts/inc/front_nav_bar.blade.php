@@ -18,6 +18,12 @@
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/login')}}"> <button class="btn btn-sm btn-success"> Login</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/register')}}"><button class="btn btn-sm btn-info">Register</button> </a>
+          </li>
         </ul>
       </div>
     </div>

@@ -47,7 +47,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return redirect('/dashboard')->with('status',"Category Added Successfully");
+        return redirect('/categories')->with('status',"Category Added Successfully");
     }
 
     public function edit($id)
@@ -64,7 +64,7 @@ class CategoryController extends Controller
 
         if($request->hasfile('image'))
         {
-            $path = 'asset/uploads/category/'.$category->image;
+            $path = 'assets/uploads/category/'.$category->image;
 
             if(File::exists($path))
             {
@@ -89,7 +89,7 @@ class CategoryController extends Controller
 
         $category->update();
 
-        return redirect('/dashboard')->with('status',"Category Updated Successfully");
+        return redirect('/categories')->with('status',"Category Updated Successfully");
 
 
     }

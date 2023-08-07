@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FrontendController extends Controller
 {
@@ -11,7 +12,11 @@ class FrontendController extends Controller
     public function index()
     {
         //return "front end working well";
-        return view('frontend.index');
+        $feature_products = Product::where('trending','1')->take(10)->get();
+
+        //$feature_products = Product::where('trending','1')->paginate(4);
+
+        return view('frontend.index', compact('feature_products'));
     }
 
 }
