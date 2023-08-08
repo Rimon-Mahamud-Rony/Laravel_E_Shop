@@ -20,6 +20,8 @@ use App\Http\Controllers\Admin\CategoryController;
 Route::get('/', 'Frontend\FrontendController@index');
 Route::get('category', 'Frontend\FrontendController@category');
 
+Route::get('view_category/{name}', 'Frontend\FrontendController@view_category');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

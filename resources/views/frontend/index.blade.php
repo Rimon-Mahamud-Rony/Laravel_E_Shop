@@ -45,7 +45,8 @@ RIMON'S E-SHOP
                             <img src="{{asset('assets/uploads/category/'.$t_c->image)}}" alt="this is image" height="180">
                             <hr>
                             <h5 class="text-center">{{$t_c->name}}</h5>
-                            <small>{{$t_c->description}}</small>
+                            <small>{{$t_c->description}}</small> <hr>
+                            <a href="{{url('view_category/'.$t_c->name)}}">View all {{$t_c->name}}</a>
                         </div>
                     </div>
                 </div>

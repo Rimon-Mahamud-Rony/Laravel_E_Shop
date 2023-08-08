@@ -27,4 +27,18 @@ class FrontendController extends Controller
         return view('frontend.category', compact('category'));
     }
 
+    public function view_category($name)
+    {
+        if(Category::where('name',$name)->exists())
+        {
+            $category = Category::where('name', $name)->first();
+            $products = Product::where('cat_id', $category->id)->where('status','0')->get();
+
+            return view('frontend.products.index', compact('category','products'));
+        }
+        else
+        {
+            return redirect('/')->with('status', "category does not available");
+        }
+    }
 }

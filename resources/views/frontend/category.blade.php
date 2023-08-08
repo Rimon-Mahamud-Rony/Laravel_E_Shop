@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title')
-RIMON'S E-SHOP
+ALL CATEGORY
 @endsection
 
 @section('content')
@@ -18,7 +18,11 @@ RIMON'S E-SHOP
                         <img src="{{asset('assets/uploads/category/'.$c_p->image)}}" alt="product image" height="150">
                         <div class="card-body">
                             <h5>{{$c_p->name}}</h5>
-                            <small>{{$c_p->description}}</small>
+                            <!--
+                            <small style="color: green;">{{$c_p->slug}}</small> <br>
+                            -->
+                            <small>{{$c_p->description}}</small> <hr>
+                            <a href="{{url('view_category/'.$c_p->name)}}">View all {{$c_p->name}}s</a>
                         </div>
                      </div>
                 </div>

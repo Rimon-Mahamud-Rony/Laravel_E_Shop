@@ -7,21 +7,21 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{'/'}}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{'/'}}">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('category')}}">Category</a>
+            <a class="nav-link active" aria-current="page" href="{{url('category')}}">ALL CATEGORY</a>
           </li>
           @guest
           @if (Route::has('login'))
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
               </li>
           @endif
 
           @if (Route::has('register'))
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  <a class="nav-link" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
               </li>
           @endif
       @else
