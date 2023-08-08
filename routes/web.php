@@ -22,6 +22,8 @@ Route::get('category', 'Frontend\FrontendController@category');
 
 Route::get('view_category/{name}', 'Frontend\FrontendController@view_category');
 
+Route::get('category/{category_name}/{product_name}', 'Frontend\FrontendController@view_product');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
