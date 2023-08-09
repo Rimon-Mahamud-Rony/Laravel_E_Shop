@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Admin;
 namespace App\Http\Controllers;
 
 //use auth;
-use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\CartController;
 
 
 /*
@@ -29,6 +30,12 @@ Route::get('category/{category_name}/{product_name}', 'Frontend\FrontendControll
 // });
 
 Auth::routes();
+
+
+Route::middleware(['auth'])->group( function() {
+
+    Route::post('add-to-cart', 'Frontend\CartController@addProduct');
+});
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
