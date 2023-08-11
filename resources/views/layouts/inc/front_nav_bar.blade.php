@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{url('category')}}">ALL CATEGORY</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url('cart')}}">CART</a>
+          </li>
           @guest
           @if (Route::has('login'))
               <li class="nav-item">

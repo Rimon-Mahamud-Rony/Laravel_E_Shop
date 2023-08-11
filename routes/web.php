@@ -25,16 +25,17 @@ Route::get('view_category/{name}', 'Frontend\FrontendController@view_category');
 
 Route::get('category/{category_name}/{product_name}', 'Frontend\FrontendController@view_product');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
+
+Route::post('add-to-cart', 'Frontend\CartController@addProduct');
+
+Route::post('delete-cart-item', 'Frontend\CartController@deleteProduct');
 
 
 Route::middleware(['auth'])->group( function() {
 
-    Route::post('add-to-cart', 'Frontend\CartController@addProduct');
+    Route::get('cart', 'Frontend\CartController@viewcart');
 });
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
